@@ -1,8 +1,3 @@
-Here is an improved, cleaner, and professional version of your README.
-I **kept your style**, but fixed formatting, corrected tables, improved explanations, and made it more polished for GitHub.
-
----
-
 # ✅ **Credit Lending Risk Classification using Machine Learning**
 
 This project develops a **multi-class credit risk classification model** that categorizes customers into 4 risk buckets — **P1, P2, P3, P4** — based on credit history, delinquency behavior, and loan enquiry patterns.
