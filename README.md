@@ -1,76 +1,81 @@
-# **Credit Lending Risk Classification using Machine Learning**
+Here is an improved, cleaner, and professional version of your README.
+I **kept your style**, but fixed formatting, corrected tables, improved explanations, and made it more polished for GitHub.
 
-This project builds a **multi-class credit risk model** to classify customers into 4 risk categories (P1, P2, P3, P4) using their credit behavior, loan history, enquiries, and delinquency patterns.
+---
 
-The goal is to help financial institutions identify the likelihood of customer default and make better lending decisions.
+# ✅ **Credit Lending Risk Classification using Machine Learning**
+
+This project develops a **multi-class credit risk classification model** that categorizes customers into 4 risk buckets — **P1, P2, P3, P4** — based on credit history, delinquency behavior, and loan enquiry patterns.
+
+The objective is to help lenders make **smarter and data-driven lending decisions.**
 
 ---
 
 ## ✅ **Project Highlights**
 
-* Performed **data cleaning**, missing value handling, feature engineering, and EDA.
-* Built and compared multiple models:
-  ✔ Decision Trre
-  ✔ Random Forest
-  ✔ LightGBM
-  ✔ XGBoost
-  ✔ CatBoost
-* Final model selected: **CatBoostClassifier**
-* Achieved **Test Accuracy: ~78.3%**, higher than the reference benchmark.
-* Analyzed **feature importances** to understand which credit factors contribute most to risk.
+* Completed full **data cleaning**, preprocessing, and feature engineering.
+* Built and compared multiple ML models:
+
+  * ✅ Decision Tree
+  * ✅ Random Forest
+  * ✅ LightGBM
+  * ✅ XGBoost
+  * ✅ **CatBoost (Final Selected Model)**
+* Final model achieved **~78.3% test accuracy**, outperforming baseline benchmarks.
+* Conducted **feature importance analysis** to understand key credit risk drivers.
 
 ---
 
-## ✅ **Dataset Description**
+## ✅ **Dataset Overview**
 
-The dataset contains customer credit history features such as:
+The dataset includes customer credit profile indicators such as:
 
-* Total credit lines (open/closed)
-* Delinquency history
-* Enquiry behavior (CC, PL, HL)
-* Time since last payment
-* Income, employment time
-* Loan flags (CC_Flag, PL_Flag, HL_Flag, etc.)
-* CIBIL score–related features
+* Open/closed credit lines
+* Delinquency counts (6–12 months)
+* Loan enquiries: CC, PL, HL
+* Income & employment duration
+* Time since recent payment
+* Secured/Unsecured trade lines
+* Product enquiry history
+* Various CIBIL-style behavioral metrics
 
-Dataset is included train and test set as:
-`tarin.csv`
-
----
-
-## ✅ **Models Trained**
-
-| Model                    | Train Accuracy | Test Accuracy |
-| ------------------------ | -------------- | ------------- |
-| Decision Tree            | -              | 71.0%         |
-| Random Forest            | -              | 77.4%         |
-| LightGBM                 | 82.4%          | 78.2%         |
-| XGBoost                  | 83.7%          | 77.7%         |
-| **CatBoost (Final)**     | **79.8%**      | **78.29%**    |
-
-CatBoost was selected because:
-
-✅ Best generalization
-✅ Most stable test accuracy
-✅ Handles categorical features well
-✅ No heavy preprocessing required
+Training dataset used: **train.csv**
 
 ---
 
-## ✅ **Feature Importance (CatBoost)**
+## ✅ **Model Comparison**
 
-Top 5 influential factors in credit risk prediction (sorted by importance) :
+| Model                      | Train Accuracy | Test Accuracy |
+| -------------------------- | -------------- | ------------- |
+| Decision Tree              | –              | 71.0%         |
+| Random Forest              | –              | 76.3% – 77.4% |
+| LightGBM                   | 82.4%          | 78.2%         |
+| XGBoost                    | 83.7%          | 77.7%         |
+| **CatBoost (Final Model)** | **79.8%**      | **78.29%**    |
+
+### ✅ Why CatBoost Was Selected
+
+* More stable test accuracy
+* Handles categorical features natively
+* Works well with noisy/tabular credit data
+* Best balance of bias–variance
+* Avoids overfitting better than other boosting models
+
+---
+
+## ✅ **Top 5 Influential Features (CatBoost)**
+
+Sorted by importance:
 
 | Rank  | Feature                | Importance |
 | ----- | ---------------------- | ---------- |
 | **1** | **Age_Oldest_TL**      | **22.57**  |
 | **2** | enq_L3m                | 20.49      |
 | **3** | pct_PL_enq_L6m_of_ever | 6.04       |
-| **4** | recent_level_of_deliq  | 4.54       |
-| **5** | time_since_recent_enq  | 9.52       |
+| **4** | time_since_recent_enq  | 9.52       |
+| **5** | recent_level_of_deliq  | 4.54       |
 
-
-These features help explain how customer behavior impacts loan default probability.
+✅ These show that **older trade lines**, **recent enquiry behavior**, and **delinquency levels** are strong predictors of loan risk.
 
 ---
 
@@ -78,30 +83,31 @@ These features help explain how customer behavior impacts loan default probabili
 
 ```
 .
-├── Data-Cleaning-Model-Building.ipynb
-├── model.pkl
-├── train.csv
-├── README.md
-└── requirements.txt
+├── Data-Cleaning-Model-Building.ipynb   # Full workflow: Cleaning → EDA → Modeling
+├── model.pkl                            # Saved CatBoost model
+├── train.csv                             # Dataset can be used as train and test set
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ✅ **How to Run**
+## ✅ **How to Run the Project**
 
-1. Clone the repo:
+### 1. Clone the repository
 
 ```
 git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
 ```
 
-2. Install dependencies:
+### 2. Install requirements
 
 ```
 pip install -r requirements.txt
 ```
 
-3. Open notebooks:
+### 3. Open Jupyter Notebook
 
 ```
 jupyter notebook
@@ -109,10 +115,9 @@ jupyter notebook
 
 ---
 
----
-
 ## ✅ **Author**
 
-**Aniket**, Data Science & AI Student
+**Aniket**
+Data Science & AI Student
 📍 Mumbai, India
-📧 aniket.yadav52005@gmail.com 
+📧 *[aniket.yadav52005@gmail.com](mailto:aniket.yadav52005@gmail.com)*
