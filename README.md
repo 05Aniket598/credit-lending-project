@@ -33,7 +33,7 @@ The dataset contains customer credit history features such as:
 * Loan flags (CC_Flag, PL_Flag, HL_Flag, etc.)
 * CIBIL score–related features
 
-Dataset is included as:
+Dataset is included train and test set as:
 `tarin.csv`
 
 ---
